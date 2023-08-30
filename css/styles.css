@@ -1,0 +1,299 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    background: black;
+}
+
+/*Header/Blog Title*/
+.header{
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: black;
+    color: firebrick;
+}
+.header h1{
+    font-size: 40px;
+}
+.header p{
+    font-size: 20px;
+}
+
+
+
+/*Style the top navigation bar*/
+.menu{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    font-weight: 600;
+    list-style: none;
+    background-color: rgb(0, 27, 117);
+    height: 40px;
+}
+ul.menu>li>a{
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+    padding-left: 25px;
+    color: white;
+}
+ul.menu>li>a:hover{
+    color: aqua;
+    font-weight: bolder;
+}
+ul.menu>li{
+    float: left;
+    margin: 0 5px;
+    position: relative;
+}
+ul.menu>li#log{
+    float: right;
+    margin: 0 5px;
+    position: relative;
+}
+ul.menu>li:hover>.sub-menu{
+    display: block;
+}
+
+.sub-menu{
+    background-color: rgb(94, 139, 243);
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    list-style: none;
+    width:150px;
+    position: absolute;
+    display: none;
+}
+.sub-menu>li>a{
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding-left: 25px;
+    color: white;
+}
+.sub-menu>li>a:hover{
+    color: rgb(227, 46, 88);
+    font-weight: bolder; 
+    border-bottom: 1px dotted orangered;
+}
+
+
+/*Tạo hai cột không bằng nhau, float cạnh nhau*/
+/*Leftcolumn*/
+.leftcolumn{
+    float: left;
+    width: 78%;
+    margin-top: 0px;
+}
+/*Rightcolumn*/
+.rightcolumn{
+    margin-top: 20px;
+    background: white;
+    float: left;
+    width: 22%;
+    border-radius: 8px;
+    padding-left: 20px;
+}
+.rightcolumn1{
+    margin-top: 0;
+    background: white;
+    float: left;
+    width: 22%;
+    border-radius: 80;
+    padding-left: 20px;
+}
+
+.ima img{
+    width: 32px;
+    height: 32px;
+}
+
+/*Hình ảnh bài viết*/
+.images{
+    width: 100%;
+    height: 200px;
+}
+.images-1{
+    width: 100%;
+    height: 500px;
+}
+/*Định dạng details*/
+#new22edit{
+    background-color: rgb(138, 253, 215);
+    border-radius: 10px;
+}
+/*Body*/
+/*Hàng 1*/
+.row1{
+    display: flex;
+    width: 98%;
+}
+.row1 h2:hover{
+    color: lightgreen;
+}
+.r1-right{
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    flex:1;
+
+}
+
+.r1-left{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    flex:2;
+}
+
+/*Thêm dạng thẻ cho bài viết*/
+.row1{
+    margin-top: 0px;
+}
+.row1 h2:hover a{
+    color: rgb(88, 191, 88);
+}
+.row1 a{
+    text-decoration: none;
+    color: black;
+}
+.card-news{
+    width: 30%;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 28px 10px 28px;
+    margin-left: 0;
+    float: left;
+}
+
+.card-news h4:hover a{
+    color: rgb(88, 191, 88);
+}
+.card-news a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Clear float khác sau các cột*/
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.row{
+    margin-top: 8px;
+    padding-top: 5px;
+}
+
+/*Thêm định dạng thẻ nội dung thêm*/
+.card{
+    background-color: white;
+    padding: 0;
+    text-align: center;  
+}
+
+
+/*Footer*/
+.footer{
+    padding: 10px;
+    background: rgb(30, 28, 28);
+    margin-top: 10px;
+    display: flex;
+    border-radius: 3px ;
+}
+.leftfoot{
+    float: left;
+    width: 40%;
+}
+/*Rightcolumn*/
+.rightfoot{
+    justify-content: center;
+    align-items: center;
+    color:#d8e4f4;
+    font-size: large;
+    float: left;
+    width: 60%;
+    margin-top: 80px;
+    padding-left: 20px;
+}
+.rightfoot a{
+    text-decoration: none;
+    color: rgb(34, 195, 67);
+    font-weight: 600;
+}
+
+
+/*CSS bài viết*/
+/*Bài viết liên quan*/
+#related-articles {
+    padding-left: 20px;  
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article-item img {
+     width: 100%;
+     height: auto;
+}
+
+.article-item h3 {
+     margin-top: 10px;
+}
+
+.article-item p {
+     margin-top: 5px;
+}
+-----------------------------------
+/*Tin hot*/
+
+  
+.news-list {
+    display: block;
+}
+  
+.news-item {
+    margin-bottom: 20px;
+}
+  
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+  
+.news-item h3 {
+    margin-top: 10px;
+    color: black;
+}
+.news-item h3:hover{
+    color: red;
+    cursor: pointer;
+}
+#related-articles h3:hover{
+    color: red;
+    cursor: pointer;
+}
+.news-item p {
+    margin-top: 5px;
+}
+.car{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-right: 20px;
+}

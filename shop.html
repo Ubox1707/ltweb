@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <script src="js/mucgia.js"></script>
+</head>
+<body>
+    <!--Menu-->
+    <div class="header">
+        <img src="images/logo.png" alt="logo">
+    </div>
+    <div>
+        <ul class="menu">
+            <li><a href="index.html">ANIME - MANGA</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Anime Chart</a></li>
+                    <li><a href="#">Thuật ngữ</a></li>
+                    <li><a href="#">Nhân vật</a></li>
+                    <li><a href="#">Quotes</a></li>
+                    <li><a href="#">Hình ảnh</a></li>
+                    <li><a href="#">Khám phá</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">COSPLAY</a></li>
+            <li><a href="#">IDOL</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Thế giới Idol</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Rumor</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CHỦ ĐỀ</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Naruto</a></li>
+                    <li><a href="#">Jujutsu Kaisen</a></li>
+                    <li><a href="#">Onepiece</a></li>
+                    <li><a href="#">Akamega kill</a></li>
+                    <li><a href="#">Onepunch Man</a></li>
+                    <li><a href="#">SpyxFamily</a></li>
+                    <li><a href="#">Detective Conan</a></li>
+                </ul>
+            </li>
+            <li><a href="#">GIỚI THIỆU</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
+            <li id="log"><a href="dangNhap.html" style="float: right">Đăng kí / Đăng nhập</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="leftcolumn">
+            <h3>What time is it?</h3>
+            <span id="dongho" onclick="startstopDH()">Đồng hồ</span>
+        </div>
+       
+        <div class="middlecolumn">
+            <h1>KHO TRUYỆN TRANH</h1>
+            <select name="mucgia" id="muc" onchange="doigia()">
+                <option value="-1">Mức giá</option>
+                <option value="50">Đến 50</option>
+                <option value="100">Từ 50 đến 100</option>
+                <option value="200">Từ 100 đến 200</option>
+                <option value="500">Từ 200 đến 500</option>
+            </select>
+            <table border="1" id="banggia">
+                <tr>
+                    <th colspan="2">Hàng hóa</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(0)"></td>
+                    <td>Chú Thuật Hồi Chiến - Tập 12</td>
+                    <td name="gia">30</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(1)"></td>
+                    <td>Dragon Ball - Tập 25</td>
+                    <td name="gia">45</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(2)"></td>
+                    <td>Bộ Onepiece Episode</td>
+                    <td name="gia">70</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(3)"></td>
+                    <td>Sơn Hải Kinh</td>
+                    <td name="gia">342</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(4)"></td>
+                    <td>Komi Nữ Thần Sợ Giao Tiếp - Tập 24</td>
+                    <td name="gia">25</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(5)"></td>
+                    <td>Trường Ca Achilles</td>
+                    <td name="gia">140</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(6)"></td>
+                    <td>Thám Tử Lừng Danh Conan - Tập 100</td>
+                    <td name="gia">25</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(7)"></td>
+                    <td>Solo Leveling - Tập 1</td>
+                    <td name="gia">80</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chon" onclick="click1box(8)"></td>
+                    <td>Hồ Sơ Tâm Lí Tội Phạm - Tập 3</td>
+                    <td name="gia">140</td>
+                    <td><input value="0" name="soluong" disabled onkeyup="thanhtien(this)"></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr class="tong">
+                    <td colspan="4">TỔNG</td>
+                    <td id="tinhtongtien"><b>897</b></td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightcolumn">
+            <h2>New feeds</h2>
+        </div>
+    </div>
+    <!--Phần footer-->
+    <div class="footer">
+        <div class="leftfoot">
+            <img class="logo2" src="images/logo2.png" alt="Logo 2">
+        </div>
+        <div class="rightfoot">
+            <p>Chào mừng bạn đến với website: <a href="#" target="_self">weiboo.com</a> .Nơi chia sẽ tất tần tật những thông tin xoay quanh thế giới Otaku. Mong rằng đến với WEIBOO sẽ giúp bạn giải đáp những thắc mắc hiểu hơn về Otaku nhé!</p>
+            <br>
+            <p>Liên Hệ Bảo Mật Bản Quyền Quảng Cáo Anime đam mỹ Truyện tranh tu tiên Hinata Zenitsu Otaku là gì Anime dễ thương
+                Waifu Obito Harem Manhwa Anime bách hợp Wibu là gì Oppa là gì Yandere là gì Anime là gì
+                Manga là gì</p>
+        </div>
+    </div>
+</body>
+</html>
